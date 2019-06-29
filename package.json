@@ -1,6 +1,6 @@
 {
   "name": "vue-tidio",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Vue Tidio plugin",
   "main": "lib/vue-tidio.js",
   "scripts": {

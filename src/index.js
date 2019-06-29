@@ -20,7 +20,7 @@ export default {
     }, tidioOptions.delay);
 
     (() => {
-      const onTidioChatApiReady = (e) => {
+      const onTidioChatApiReady = () => {
         Vue.prototype.$tidioChatApi = window.tidioChatApi;
       };
 
