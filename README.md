@@ -16,17 +16,24 @@ yarn add vue-tidio
 - Import package and install plugin
 
 ```js
+import { createApp } from 'vue';
 import VueTidio from 'vue-tidio';
+import App from './App.vue';
 
 // required `appKey` param (tidio public key)
 
 // available additional `delay` param
 // to delay tidio script load (default: 0 ms)
 
-Vue.use(VueTidio, { appKey: 'XXX' });
+const app = createApp(App);
+
+app.use(VueTidio, { appKey: 'XXX' });
+
+app.mount('#app');
 ```
 
 - Configure chat visibility per page
+
 ```js
 const ROUTES: {
   {
@@ -40,8 +47,8 @@ const ROUTES: {
 };
 
 router.afterEach((to) => {
-  Vue.prototype.$tidioChatApi &&
-    Vue.prototype.$tidioChatApi.display(to.meta.showChat);
+  router.app.config.globalProperties.$tidioChatApi &&
+    router.app.config.globalProperties.$tidioChatApi.display(to.meta.showChat);
 });
 ```
 
