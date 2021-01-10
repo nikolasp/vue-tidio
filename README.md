@@ -1,6 +1,8 @@
 # Vue Tidio Chat Integration
 
-Simple Vue [Tidio Chat](https://www.tidio.com) integration
+Simple Vue 3 [Tidio Chat](https://www.tidio.com) integration
+
+Use older version [v1.0.1](https://www.npmjs.com/package/vue-tidio/v/1.0.1) for Vue 2
 
 ## Getting started
 
@@ -47,8 +49,8 @@ const ROUTES: {
 };
 
 router.afterEach((to) => {
-  router.app.config.globalProperties.$tidioChatApi &&
-    router.app.config.globalProperties.$tidioChatApi.display(to.meta.showChat);
+  window.tidioChatApi &&
+    window.tidioChatApi.display(to.meta.showChat);
 });
 ```
 

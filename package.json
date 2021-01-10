@@ -1,6 +1,6 @@
 {
   "name": "vue-tidio",
-  "version": "2.0.0-beta.1",
+  "version": "2.0.0",
   "description": "Vue Tidio plugin",
   "main": "build/module/index.js",
   "typings": "build/module/index.d.ts",
